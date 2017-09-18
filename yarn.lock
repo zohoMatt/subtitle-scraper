@@ -23,6 +23,13 @@ ansi-styles@^3.1.0:
   dependencies:
     color-convert "^1.9.0"
 
+app@.:
+  version "0.1.0"
+  dependencies:
+    app "."
+    inquirer "^3.2.3"
+    request "^2.81.0"
+
 asn1@~0.2.3:
   version "0.2.3"
   resolved "http://registry.npm.taobao.org/asn1/download/asn1-0.2.3.tgz#dac8787713c9966849fc8180777ebe9c1ddf3b86"

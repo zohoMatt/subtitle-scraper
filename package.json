@@ -16,7 +16,7 @@
     "ramda": "^0.24.1"
   },
   "scripts": {
-    "test": "mocha --recursively",
+    "test": "mocha --recursive",
     "start": "node app.js "
   }
 }
