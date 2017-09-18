@@ -1,0 +1,17 @@
+{
+  "name": "subtitle-scraper",
+  "version": "0.1.0",
+  "description": "Helps you search subtitles more conveniently!",
+  "main": "app.js",
+  "repository": "https://github.com/zohoMatt/subtitle-scraper.git",
+  "author": "zohoMatt <zuoh14@mails.tsinghua.edu.cn>",
+  "license": "MIT",
+  "dependencies": {
+    "inquirer": "^3.2.3",
+    "request": "^2.81.0"
+  },
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "mocha": "^3.5.3"
+  }
+}
