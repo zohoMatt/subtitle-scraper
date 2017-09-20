@@ -1,11 +1,6 @@
 const rules = require('../configs/NamingRules')
 
 /******************** Helpers level 0 *******************/
-
-
-
-
-/******************** Helpers level 1 *******************/
 // String -> String
 const nameModifier = raw => raw.split('.').slice(0, -1).join(' ')
 

@@ -12,6 +12,30 @@
       "videoEncoding": "XviD",
       "signalSource": "HDTV",
       "author": "DiMENSION"
+    },
+    {
+      "fullName": "Game.of.Thrones.S07E06.720p.HDTV.x264.AC3.RoSubbed-uTsTV",
+      "name": "Game of Thrones",
+      "season": 7,
+      "episode": 6,
+      "year": null,
+      "resolution": "720p",
+      "audioEncoding": "AC3",
+      "videoEncoding": "x264",
+      "signalSource": "HDTV",
+      "author": "uTsTV"
+    },
+    {
+      "fullName": "Game.of.Thrones.S07.MULTi.1080p.AMZN.WEB-DL.DD5.1.H265-ARK01-ALEATOIRE",
+      "name": "Game of Thrones",
+      "season": 7,
+      "episode": null,
+      "year": null,
+      "resolution": "1080p",
+      "audioEncoding": "DD5.1",
+      "videoEncoding": "H265",
+      "signalSource": "WEB-DL",
+      "author": "ALEATOIRE"
     }
   ]
 }

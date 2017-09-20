@@ -17,13 +17,14 @@ module.exports = {
     ],
     audioEncoding: [
         /aac/,
-        /ac[0-3](\.\d+)+/,
+        /ac[0-3](\.\d+)*/,
         /mp3/,
         /dd[2345]\.1/,
         /dts/
     ],
     videoEncoding: [
-        /h264/,
+        /h[.]?264/,
+        /h[.]?265/,
         /xvid/,
         /x264/
     ],
@@ -31,6 +32,7 @@ module.exports = {
         /blu[-e]ray/,
         /bdrip/,
         /web[-]?dl/,
+        /webrip/,
         /hdtv/,
         /hdtvrip/,
         /dvdrip/

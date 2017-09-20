@@ -8,7 +8,7 @@ const objEqual = (a, b) => compose(
     all(identity),
     map(eqProps(__, a, b))
 )(
-    keys({ ...a, ...b})
+    keys({ ...a, ...b })
 )
 
 /**======================================================**/
