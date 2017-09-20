@@ -41,6 +41,9 @@ const formatter = info => {
     }
 }
 
+const fullNameParser = compose(formatter, nameExtractor)
+
 /******************** Exports *******************/
 exports.nameExtractor = nameExtractor
 exports.formatter = formatter
+exports.fullNameParser = fullNameParser

@@ -2,8 +2,7 @@ const assert = require('chai').assert
 const path = require('path')
 
 /******************** Configs *******************/
-const demoDataFolder = path.resolve('./test/demodata')
-const commonFolder = path.join(demoDataFolder, 'common')
+const demoDataFolder = path.resolve('./test/demodata/directorySearchRoot')
 const MEDIA_EXTENSIONS = require('../configs/MediaExtensions').extname
 
 /******************** To be tested *******************/

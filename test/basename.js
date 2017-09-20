@@ -1,14 +1,20 @@
 const assert = require('chai').assert
+const commonUtils = require('../utils/common')
+const parseJsonFile = commonUtils.parseJsonFile
+const objEqual = commonUtils.objEqual
 
 /******************** To be tested *******************/
-const textMod = require('../src/basename')
+const fullNameParser = require('../src/basename').fullNameParser
 
 /******************** Tests *******************/
 const nameExtractor = () => describe('# .nameExtractor()', () => {
-    const NAME = 'Prison.Break.1994.S02E01.Manhunt.HR.HDTV.AC3.5.1.XviD-DiMENSION'
+    const seriesNameStd = parseJsonFile('./test/demoData/nameLib/series.json').entries
     it('should extract name properly', () => {
-        const res = textMod.nameExtractor(NAME)
-        console.log(res)
+        const compares = seriesNameStd.map(prop('fullName'))
+            .map(fullNameParser)
+            .map((e, n) => objEqual(dissoc('fullName', seriesNameStd[n]), e))
+
+        assert.equal(all(identity, compares), true)
     })
 })
 
