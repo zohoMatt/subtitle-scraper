@@ -9,6 +9,7 @@
   "dependencies": {
     "fs-extra": "^4.0.2",
     "inquirer": "^3.2.3",
+    "node-7z": "^0.4.0",
     "request": "^2.81.0"
   },
   "devDependencies": {
