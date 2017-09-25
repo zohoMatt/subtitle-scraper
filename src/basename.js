@@ -1,14 +1,49 @@
 const rules = require('../configs/NamingRules')
 
+/******************** Typedefs *******************/
+/**
+ * @typedef {Object} NameObject
+ * @property name               {String}
+ * @property season             {Number}
+ * @property episode            {Number}
+ * @property year               {Number}
+ * @property resolution         {String}
+ * @property audioEncoding      {String}
+ * @property videoEncoding      {String}
+ * @property signalSource       {String}
+ * @property author             {String}
+ */
+
 /******************** Helpers level 0 *******************/
-// String -> String
+/**
+ * @function nameModifier
+ * @description Make ' ' as the replacement of delimiter '.' in a string.
+ *
+ * @param raw {String}
+ * @returns {String}
+ * @signature String -> String
+ */
 const nameModifier = raw => raw.split('.').slice(0, -1).join(' ')
 
-// String -> Number
+/**
+ * @function numberExtractor
+ * @description Get continuous digits in a string.
+ *
+ * @param raw
+ * @returns {String}
+ * @signature String -> Number
+ */
 const numberExtractor = raw => raw === null ? null : Number(raw.match(/\d+/g)[0])
 
 /******************** Features *******************/
-// String -> { k: v }
+/**
+ * @function nameExtractor
+ * @description Extract the string into a raw name object. Not formatted yet.
+ *
+ * @param fullName
+ * @returns {NameObject}
+ * @signature  String -> { k: v }
+ */
 const nameExtractor = fullName =>
     Object.entries(rules)
         // { k: [v] } -> { k: m }
@@ -25,7 +60,14 @@ const nameExtractor = fullName =>
             return { ...obj, ...elem }
         }, {})
 
-// { k: v } -> { k: v' }
+/**
+ * @function formatter
+ * @description Modify the name, season, episode & year entry.
+ *
+ * @param info {NameObject}
+ * @returns {NameObject}
+ * { k: v } -> { k: v' }
+ */
 const formatter = info => {
     return {
         ...info,
