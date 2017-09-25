@@ -3,7 +3,7 @@ const path = require('path')
 
 /******************** Configs *******************/
 const demoDataFolder = path.resolve('./test/demodata/directorySearchRoot')
-const MEDIA_EXTENSIONS = require('../configs/MediaExtensions').extname
+const MEDIA_EXTENSIONS = require('../configs/Extensions').media
 
 /******************** To be tested *******************/
 const search = require('../src/localSeach')
@@ -23,7 +23,7 @@ const listMediaFiles = () => describe('# .listMediaFiles()', () => {
     it('should contain only media files', () => {
         assert.isAbove(medias.length, 0)
         medias.forEach(file => {
-            if (!MEDIA_EXTENSIONS.includes(path.extname(file).slice(1))) {
+            if (!MEDIA_EXTENSIONS.includes(path.extname(file))) {
                 assert.fail()
             }
         })
