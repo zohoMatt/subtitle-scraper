@@ -1,4 +1,4 @@
-const rules = require('../configs/NamingRules')
+const rules = require('../../configs/NamingRules')
 
 /******************** Typedefs *******************/
 /**

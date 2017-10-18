@@ -1,2 +1,2 @@
 /******************** Test env configs *******************/
-require('../utils/globalEnv').mapRamdaGlobal()
+require('../lib/globalEnv').mapRamdaGlobal()

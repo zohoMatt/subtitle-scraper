@@ -37,7 +37,9 @@ const getSearchResults = async (keyword) => {
         // betterdo cheerio options
     })
 
-    return $('.tt.clearfix a[href]').map((i, e) => $(e).attr('href')).get()
+    const optionListUrl = $('.tt.clearfix a[href]').map((i, e) => $(e).attr('href')).get()
+    console.log(optionListUrl)
+    return optionListUrl
 }
 
 // Step 2: Get package downloading URL
@@ -55,7 +57,9 @@ const getDetailUrl = async (optionListUrl) => {
     const $ = cheerio.load(response.data, {
         // betterdo cheerio options
     })
-    return $('td.first>a[href]').map((i, e) => $(e).attr('href')).get()
+    const downloadPageUrl = $('td.first>a[href]').map((i, e) => $(e).attr('href')).get()
+    console.log(downloadPageUrl)
+    return downloadPageUrl
 }
 
 // Step 3: Analyze results
@@ -65,7 +69,7 @@ const getDetailUrl = async (optionListUrl) => {
 // Step 3.2: No relevant results
 
 // Step 4: Send request and download file
-const getPackageUrl = (detailUrl, savedPath) => new Promise((resolve, reject) => {
+const downloadPackage = (detailUrl, savedPath) => new Promise((resolve, reject) => {
     let $ = null;
     axios({
         method: 'get',
@@ -88,8 +92,9 @@ const getPackageUrl = (detailUrl, savedPath) => new Promise((resolve, reject) =>
             responseType: 'stream'
         })
     }).then(chunk => {
+        console.log(chunk)
         chunk.data
-            .pipe(fs.createWriteStream('example.zip'))
+            .pipe(fs.createWriteStream(savedPath))
             .on('finish', () => resolve())
     }).catch(err => {
         reject(err)
@@ -107,10 +112,9 @@ const zimukuPlugin = {
     },
 
     async download(nameObj) {
-        const optionListUrls = await getSearchResults('wonder woman 2017')
+        const optionListUrls = await getSearchResults('spiderman')
         const detailUrls = await getDetailUrl(optionListUrls[0])
-        await getPackageUrl(detailUrls[0])
-        return 0
+        await downloadPackage(detailUrls[0], './data/example.txt')
     }
 }
 

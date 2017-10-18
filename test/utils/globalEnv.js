@@ -1,7 +1,7 @@
 const assert = require('chai').assert
 
 /******************** To be tested *******************/
-const mapRamdaGlobal = require('../../utils/globalEnv').mapRamdaGlobal
+const mapRamdaGlobal = require('../../lib/globalEnv').mapRamdaGlobal
 
 /******************** Tests *******************/
 const testMapRamda = () => describe('# mapRamdaGlobal()', () => {
@@ -15,6 +15,6 @@ const testMapRamda = () => describe('# mapRamdaGlobal()', () => {
 })
 
 /******************** Summary *******************/
-describe('>>> /utils/globalEnv.js', () => {
+describe('>>> /lib/globalEnv.js', () => {
     testMapRamda()
 })

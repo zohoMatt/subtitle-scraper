@@ -1,10 +1,10 @@
 const assert = require('chai').assert
-const commonUtils = require('../utils/common')
+const commonUtils = require('../lib/common')
 const parseJsonFile = commonUtils.parseJsonFile
 const objEqual = commonUtils.objEqual
 
 /******************** To be tested *******************/
-const fullNameParser = require('../src/basename').fullNameParser
+const fullNameParser = require('../src/utils/basename').fullNameParser
 
 /******************** Tests *******************/
 const nameExtractor = () => describe('# .nameExtractor()', () => {

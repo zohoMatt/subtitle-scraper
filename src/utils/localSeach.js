@@ -1,9 +1,9 @@
 const fs = require('fs-extra')
 const path = require('path')
 
-const ARCHIVE_EXTENSIONS = require('../configs/Extensions').archive
-const MEDIA_EXTENSIONS = require('../configs/Extensions').media
-const SUBTITLE_EXTENSIONS = require('../configs/Extensions').subtitle
+const ARCHIVE_EXTENSIONS = require('../../configs/Extensions').archive
+const MEDIA_EXTENSIONS = require('../../configs/Extensions').media
+const SUBTITLE_EXTENSIONS = require('../../configs/Extensions').subtitle
 
 /******************** Helpers level 0 *******************/
 let isDir = fullPath => fs.existsSync(fullPath) && fs.lstatSync(fullPath).isDirectory()

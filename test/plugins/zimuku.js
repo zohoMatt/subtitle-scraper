@@ -8,7 +8,7 @@ const zimuku = require('../../src/plugins/zimuku').zimukuPlugin
 const testZimuku = () => describe('# Basic tests', () => {
     it('should print info', async () => {
         await zimuku.download()
-    }).timeout(10000)
+    }).timeout(30000)
 })
 
 /******************** Summary *******************/

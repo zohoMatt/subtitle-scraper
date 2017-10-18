@@ -1,7 +1,7 @@
 const assert = require('chai').assert
 
 /******************** To be tested *******************/
-const objEqual = require('../../utils/common').objEqual
+const objEqual = require('../../lib/common').objEqual
 
 /******************** Tests *******************/
 const testObjEqual = () => describe('# .objEqual()', () => {

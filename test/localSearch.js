@@ -6,7 +6,7 @@ const demoDataFolder = path.resolve('./test/demodata/directorySearchRoot')
 const MEDIA_EXTENSIONS = require('../configs/Extensions').media
 
 /******************** To be tested *******************/
-const search = require('../src/localSeach')
+const search = require('../src/utils/localSeach')
 
 /******************** Tests *******************/
 const testListFiles = () => describe('# .listAllFiles()', () => {
